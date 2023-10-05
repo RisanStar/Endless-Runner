@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject groundchecker;
     public LayerMask WhatIsGround;
+    public float jumpForce = 1.0f;
 
     public float maxSpeed = 15.0f;
     bool isOnGround = false;
@@ -37,7 +39,6 @@ public class PlayerController : MonoBehaviour
         float movementValueX = 2.0f;
         float movementValueY = 2.0f;
 
-
         //Velocity
         playerobject.velocity = new Vector2(movementValueX * maxSpeed, playerobject.velocity.y);
 
@@ -46,8 +47,8 @@ public class PlayerController : MonoBehaviour
         if (isOnGround)
         {
             if (Input.GetKey(KeyCode.Space))
-                playerobject.velocity = new Vector3(movementValueY * maxSpeed, playerobject.velocity.x);
+                playerobject.velocity = new Vector3(movementValueY * jumpForce, playerobject.velocity.x);
         }
-
+    
     }
 }
