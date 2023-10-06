@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     float timeToNextSpawn;
     float timeSinceLastSpawn = 0.0f;
 
-    public float minSpawnTime = 0.5f;
-    public float maxSpawnTime = 3.0f;
+    public float minSpawnTime = 0.2f;
+    public float maxSpawnTime = 1.0f;
 
     // Start is called before the first frame update
     void Start()

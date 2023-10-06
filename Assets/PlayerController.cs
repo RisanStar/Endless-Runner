@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         // Horizontal and Vertical input
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            maxSpeed = 13.0f;
+            maxSpeed = 15.0f;
         }
         else
         {
