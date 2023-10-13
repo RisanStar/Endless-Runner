@@ -19,11 +19,4 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
 
     }
-    public void back()
-    {
-        Debug.Log("Back!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
-    }
-
 }
-
